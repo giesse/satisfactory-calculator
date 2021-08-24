@@ -67,6 +67,23 @@
           "value": "Petroleum Coke"
         }
       ]
+    },
+    {
+      "id": "LbMUaXPxv",
+      "name": "Resource",
+      "x": 130,
+      "y": -433,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Copper Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 180
+        }
+      ]
     }
   ],
   "comments": []
