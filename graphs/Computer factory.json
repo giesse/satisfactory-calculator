@@ -1,0 +1,73 @@
+{
+  "id": "f1c1f2c0-04c9-11ec-b6f7-dde978da9162",
+  "version": "1.0.0-beta.2",
+  "name": "Computer factory",
+  "nodes": [
+    {
+      "id": "gdnYobXLT",
+      "name": "Resource",
+      "x": -202,
+      "y": -431,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Crude Oil"
+        },
+        {
+          "name": "Amount",
+          "value": 240
+        }
+      ]
+    },
+    {
+      "id": "M08f08o0o",
+      "name": "Refineries",
+      "x": -216,
+      "y": -369,
+      "templateName": "Refineries",
+      "params": [
+        {
+          "name": "Input Items",
+          "value": {}
+        },
+        {
+          "name": "Input Fluid",
+          "source": {
+            "id": "gdnYobXLT",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Plastic"
+        }
+      ]
+    },
+    {
+      "id": "lxXEBugrV",
+      "name": "Refineries",
+      "x": -292,
+      "y": -274,
+      "templateName": "Refineries",
+      "params": [
+        {
+          "name": "Input Items",
+          "value": {}
+        },
+        {
+          "name": "Input Fluid",
+          "source": {
+            "id": "M08f08o0o",
+            "port": "Output Fluid"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Petroleum Coke"
+        }
+      ]
+    }
+  ],
+  "comments": []
+}
