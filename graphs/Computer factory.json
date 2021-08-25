@@ -6,7 +6,7 @@
     {
       "id": "gdnYobXLT",
       "name": "Resource",
-      "x": -204,
+      "x": -206,
       "y": -430,
       "templateName": "Resource",
       "params": [
@@ -47,8 +47,8 @@
     {
       "id": "lxXEBugrV",
       "name": "Refineries",
-      "x": -131,
-      "y": -280,
+      "x": -102,
+      "y": -269,
       "templateName": "Refineries",
       "params": [
         {
@@ -71,8 +71,8 @@
     {
       "id": "LbMUaXPxv",
       "name": "Resource",
-      "x": -400,
-      "y": -432,
+      "x": -541,
+      "y": -435,
       "templateName": "Resource",
       "params": [
         {
@@ -88,8 +88,8 @@
     {
       "id": "GnU3Nfp3O",
       "name": "Coal Generators",
-      "x": -129,
-      "y": -217,
+      "x": -101,
+      "y": -214,
       "templateName": "Coal Generators",
       "params": [
         {
@@ -97,6 +97,42 @@
           "source": {
             "id": "lxXEBugrV",
             "port": "Output Items"
+          }
+        }
+      ]
+    },
+    {
+      "id": "_GGPrfqmg",
+      "name": "Storage",
+      "x": -298,
+      "y": -304,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "M08f08o0o",
+            "port": "Output Items"
+          }
+        },
+        {
+          "name": "Storage",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "fj39vptY7",
+      "name": "Smelters",
+      "x": -541,
+      "y": -391,
+      "templateName": "Smelters",
+      "params": [
+        {
+          "name": "Input Ore",
+          "source": {
+            "id": "LbMUaXPxv",
+            "port": "Output"
           }
         }
       ]
