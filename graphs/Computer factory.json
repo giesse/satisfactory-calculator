@@ -445,8 +445,12 @@
           }
         },
         {
+          "name": "Mode",
+          "value": "Set right"
+        },
+        {
           "name": "Split",
-          "value": 350
+          "value": 130
         }
       ]
     },
@@ -504,6 +508,10 @@
             "id": "_GGPrfqmg",
             "port": "Output"
           }
+        },
+        {
+          "name": "Mode",
+          "value": "Set left"
         },
         {
           "name": "Split",
