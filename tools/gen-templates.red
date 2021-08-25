@@ -32,7 +32,8 @@ foreach miner values-of data/miners [
 output/recipes: #(refineries: #() constructors: #() assemblers: #() manufacturers: #() blenders: #() packagers: #() smelters: #() foundries: #())
 output-recipe-items: function [per-min recipe-items output-items] [
     foreach item recipe-items [
-        put output-items item/item/slug outing: copy #()
+        outing: copy #()
+        put output-items item/item/slug outing
         outing/name: item/item/name
         outing/amount: item/amount * per-min
     ]
@@ -42,14 +43,37 @@ output-recipe: function [output-bin recipe] [
     ;outrec/name: recipe/name
     per-min: 60 / recipe/time
     outrec/ingredients: copy #()
-    outrec/products: copy #()
+    outrec/product: copy #()
     output-recipe-items per-min recipe/ingredients outrec/ingredients
-    output-recipe-items per-min recipe/products outrec/products
+    product: recipe/products/1
+    outrec/product/slug: product/item/slug
+    outrec/product/name: product/item/name
+    outrec/product/amount: product/amount * per-min
 ]
 output-refinery-ingredient: function [outing item per-min] [
     outing/name: item/item/name
     outing/slug: item/item/slug
     outing/amount: item/amount * per-min
+]
+output-fluid-recipe: function [output-bin recipe] [
+    put output-bin recipe/name outrec: copy #()
+    per-min: 60 / recipe/time
+    outrec/ingredients: copy #(items: #[none] fluid: #[none])
+    outrec/products: copy #(items: #[none] fluid: #[none])
+    foreach item recipe/ingredients [
+        either item/item/liquid [
+            output-refinery-ingredient outrec/ingredients/fluid: copy #() item per-min
+        ] [
+            output-refinery-ingredient outrec/ingredients/items: copy #() item per-min
+        ]
+    ]
+    foreach item recipe/products [
+        either item/item/liquid [
+            output-refinery-ingredient outrec/products/fluid: copy #() item per-min
+        ] [
+            output-refinery-ingredient outrec/products/items: copy #() item per-min
+        ]
+    ]
 ]
 foreach recipe values-of data/recipes [
     foreach ing recipe/ingredients [
@@ -61,33 +85,16 @@ foreach recipe values-of data/recipes [
     foreach building recipe/producedIn [
         switch/default building [
             "Desc_OilRefinery_C" [
-                put output/recipes/refineries recipe/name outrec: copy #()
-                per-min: 60 / recipe/time
-                outrec/ingredients: copy #(items: #[none] fluid: #[none])
-                outrec/products: copy #(items: #[none] fluid: #[none])
-                foreach item recipe/ingredients [
-                    either item/item/liquid [
-                        output-refinery-ingredient outrec/ingredients/fluid: copy #() item per-min
-                    ] [
-                        output-refinery-ingredient outrec/ingredients/items: copy #() item per-min
-                    ]
-                ]
-                foreach item recipe/products [
-                    either item/item/liquid [
-                        output-refinery-ingredient outrec/products/fluid: copy #() item per-min
-                    ] [
-                        output-refinery-ingredient outrec/products/items: copy #() item per-min
-                    ]
-                ]
+                output-fluid-recipe output/recipes/refineries recipe
             ]
             "Desc_ConstructorMk1_C" [
                 output-recipe output/recipes/constructors recipe
             ]
             "Desc_Blender_C" [
-                output-recipe output/recipes/blenders recipe
+                output-fluid-recipe output/recipes/blenders recipe
             ]
             "Desc_Packager_C" [
-                output-recipe output/recipes/packagers recipe
+                output-fluid-recipe output/recipes/packagers recipe
             ]
             "Desc_AssemblerMk1_C" [
                 output-recipe output/recipes/assemblers recipe
