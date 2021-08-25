@@ -10,7 +10,7 @@ module.exports = (node, graph) => {
         const smeltersPerFloor = 6,
           floors = Math.ceil(inputOre.value.amount / (recipe.ingredientAmount * smeltersPerFloor)),
           clock = inputOre.value.amount / (floors * smeltersPerFloor * recipe.ingredientAmount)
-        outputIngots.setValue({slug: recipe.productSlug, amount: recipe.productAmount * floors * smeltersPerFloor})
+        outputIngots.setValue({slug: recipe.productSlug, amount: recipe.productAmount * floors * smeltersPerFloor * clock})
         node.comment = `${floors} floors of ${smeltersPerFloor} smelters @ ${Math.round(clock * 10000) / 100}%
 Producing ${outputIngots.value.amount} ${recipe.productName}/min`
       } else {
