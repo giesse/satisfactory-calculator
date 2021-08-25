@@ -12,12 +12,10 @@
       "params": [
         {
           "name": "Resource",
-          "public": true,
           "value": "Crude Oil"
         },
         {
           "name": "Amount",
-          "public": true,
           "value": 240
         }
       ]
@@ -79,12 +77,10 @@
       "params": [
         {
           "name": "Resource",
-          "public": true,
           "value": "Copper Ore"
         },
         {
           "name": "Amount",
-          "public": true,
           "value": 180
         }
       ]
@@ -205,6 +201,119 @@
         {
           "name": "Recipe",
           "value": "Circuit Board"
+        }
+      ]
+    },
+    {
+      "id": "asrjj3MJF",
+      "name": "Resource",
+      "x": -839,
+      "y": -450,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Copper Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 120
+        }
+      ]
+    },
+    {
+      "id": "7HfzWgHKc",
+      "name": "Smelters",
+      "x": -839,
+      "y": -404,
+      "templateName": "Smelters",
+      "params": [
+        {
+          "name": "Input Ore",
+          "source": {
+            "id": "asrjj3MJF",
+            "port": "Output"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xwEzEtnpz",
+      "name": "Constructors",
+      "x": -839,
+      "y": -353,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "7HfzWgHKc",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Wire"
+        }
+      ]
+    },
+    {
+      "id": "x-R1kcimb",
+      "name": "Constructors",
+      "x": -839,
+      "y": -234,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "FwPLAQYxc",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Cable"
+        }
+      ]
+    },
+    {
+      "id": "FwPLAQYxc",
+      "name": "Storage",
+      "x": -839,
+      "y": -299,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "xwEzEtnpz",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Storage",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "d-oNZSDbw",
+      "name": "Storage",
+      "x": -838,
+      "y": -178,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "x-R1kcimb",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Storage",
+          "value": 10
         }
       ]
     }
