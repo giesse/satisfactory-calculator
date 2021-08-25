@@ -13,8 +13,14 @@ module.exports = (node, graph) => {
         outputIngots.setValue({slug: recipe.productSlug, amount: recipe.productAmount * floors * smeltersPerFloor})
         node.comment = `${floors} floors of ${smeltersPerFloor} smelters @ ${Math.round(clock * 10000) / 100}%
 Producing ${outputIngots.value.amount} ${recipe.productName}/min`
-      } else node.comment = "Invalid input!"
-    } else node.comment = "No input!"
+      } else {
+        node.comment = "Invalid input!"
+        outputIngots.setValue({})
+      }
+    } else {
+      node.comment = "No input!"
+      outputIngots.setValue({})
+    }
   }
   update()
   inputOre.onChange = update
