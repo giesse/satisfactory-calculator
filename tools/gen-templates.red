@@ -8,6 +8,13 @@ foreach [word name] [recipes "Recipes:" items "Items:" schematics "Schematics:" 
     foreach key keys-of select data word [print [tab key]]
 ]
 
+output/items: #()
+foreach item values-of data/items [
+    if find/match item/className "Desc_" [
+        put output/items item/slug item/name
+    ]
+]
+
 output/resources: #()
 output/reverse-resources: #()
 output/resource-list: []
@@ -90,7 +97,13 @@ foreach recipe values-of data/recipes [
                 output-recipe output/recipes/manufacturers recipe
             ]
             "Desc_SmelterMk1_C" [
-                output-recipe output/recipes/smelters recipe
+                per-min: 60 / recipe/time
+                put output/recipes/smelters recipe/ingredients/1/item/slug outrec: copy #()
+                outrec/ingredientName: recipe/ingredients/1/item/name
+                outrec/ingredientAmount: recipe/ingredients/1/amount * per-min
+                outrec/productSlug: recipe/products/1/item/slug
+                outrec/productName: recipe/products/1/item/name
+                outrec/productAmount: recipe/products/1/amount * per-min
             ]
             "Desc_FoundryMk1_C" [
                 output-recipe output/recipes/foundries recipe
@@ -120,5 +133,5 @@ foreach fuel gendata/fuel [
     outfuel/amount: coalgen/powerProduction * factor / fuel/energyValue
 ]
 
-write %output.json to-json/pretty output "  "
-;save %output.json output
+;write %output.json to-json/pretty output "  "
+save %output.json output
