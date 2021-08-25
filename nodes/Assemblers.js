@@ -8,7 +8,7 @@ module.exports = (node, graph) => {
 
   function update() {
     const recipe = recipes[recipeSelector.value]
-    if (input1.value.slug && input1.value.slug) {
+    if (input1.value.slug && input2.value.slug) {
       let inputs = {}, validInputs = true
       // check if inputs are valid
       inputs[input1.value.slug] = input1.value.amount
