@@ -6,8 +6,8 @@
     {
       "id": "gdnYobXLT",
       "name": "Resource",
-      "x": 151,
-      "y": -627,
+      "x": 76,
+      "y": -492,
       "templateName": "Resource",
       "params": [
         {
@@ -23,8 +23,8 @@
     {
       "id": "M08f08o0o",
       "name": "Refineries",
-      "x": 140,
-      "y": -587,
+      "x": 65,
+      "y": -452,
       "templateName": "Refineries",
       "params": [
         {
@@ -47,8 +47,8 @@
     {
       "id": "lxXEBugrV",
       "name": "Refineries",
-      "x": 243,
-      "y": -502,
+      "x": 168,
+      "y": -367,
       "templateName": "Refineries",
       "params": [
         {
@@ -72,7 +72,7 @@
       "id": "LbMUaXPxv",
       "name": "Resource",
       "x": -155,
-      "y": -683,
+      "y": -628,
       "templateName": "Resource",
       "params": [
         {
@@ -88,8 +88,8 @@
     {
       "id": "GnU3Nfp3O",
       "name": "Coal Generators",
-      "x": 243,
-      "y": -454,
+      "x": 168,
+      "y": -319,
       "templateName": "Coal Generators",
       "params": [
         {
@@ -104,8 +104,8 @@
     {
       "id": "_GGPrfqmg",
       "name": "Storage",
-      "x": 62,
-      "y": -531,
+      "x": -13,
+      "y": -396,
       "templateName": "Storage",
       "params": [
         {
@@ -129,7 +129,7 @@
       "id": "fj39vptY7",
       "name": "Smelters",
       "x": -155,
-      "y": -646,
+      "y": -591,
       "templateName": "Smelters",
       "params": [
         {
@@ -145,7 +145,7 @@
       "id": "p-FsXSdJb",
       "name": "Constructors",
       "x": -155,
-      "y": -603,
+      "y": -548,
       "templateName": "Constructors",
       "params": [
         {
@@ -165,7 +165,7 @@
       "id": "Ap1hjD296",
       "name": "Storage",
       "x": -155,
-      "y": -558,
+      "y": -503,
       "templateName": "Storage",
       "params": [
         {
@@ -188,8 +188,8 @@
     {
       "id": "6NaBTo_2C",
       "name": "Assemblers",
-      "x": 62,
-      "y": -411,
+      "x": -13,
+      "y": -276,
       "templateName": "Assemblers",
       "params": [
         {
@@ -215,8 +215,8 @@
     {
       "id": "asrjj3MJF",
       "name": "Resource",
-      "x": -389,
-      "y": -680,
+      "x": -344,
+      "y": -465,
       "templateName": "Resource",
       "params": [
         {
@@ -232,8 +232,8 @@
     {
       "id": "7HfzWgHKc",
       "name": "Smelters",
-      "x": -389,
-      "y": -642,
+      "x": -344,
+      "y": -427,
       "templateName": "Smelters",
       "params": [
         {
@@ -248,8 +248,8 @@
     {
       "id": "xwEzEtnpz",
       "name": "Constructors",
-      "x": -389,
-      "y": -595,
+      "x": -344,
+      "y": -380,
       "templateName": "Constructors",
       "params": [
         {
@@ -268,8 +268,8 @@
     {
       "id": "x-R1kcimb",
       "name": "Constructors",
-      "x": -389,
-      "y": -486,
+      "x": -344,
+      "y": -271,
       "templateName": "Constructors",
       "params": [
         {
@@ -288,8 +288,8 @@
     {
       "id": "FwPLAQYxc",
       "name": "Storage",
-      "x": -389,
-      "y": -547,
+      "x": -344,
+      "y": -332,
       "templateName": "Storage",
       "params": [
         {
@@ -312,8 +312,8 @@
     {
       "id": "d-oNZSDbw",
       "name": "Storage",
-      "x": -389,
-      "y": -439,
+      "x": -344,
+      "y": -224,
       "templateName": "Storage",
       "params": [
         {
@@ -336,8 +336,8 @@
     {
       "id": "QoPBW6Ix4",
       "name": "Resource",
-      "x": -629,
-      "y": -678,
+      "x": -643,
+      "y": -681,
       "templateName": "Resource",
       "params": [
         {
@@ -346,15 +346,15 @@
         },
         {
           "name": "Amount",
-          "value": 270
+          "value": 240
         }
       ]
     },
     {
       "id": "wT_T_NQOB",
       "name": "Smelters",
-      "x": -629,
-      "y": -641,
+      "x": -643,
+      "y": -644,
       "templateName": "Smelters",
       "params": [
         {
@@ -369,8 +369,8 @@
     {
       "id": "P6O4K3Nkc",
       "name": "Constructors",
-      "x": -629,
-      "y": -594,
+      "x": -643,
+      "y": -597,
       "templateName": "Constructors",
       "params": [
         {
@@ -389,8 +389,8 @@
     {
       "id": "LO3yFfdeI",
       "name": "Constructors",
-      "x": -629,
-      "y": -488,
+      "x": -647,
+      "y": -359,
       "templateName": "Constructors",
       "params": [
         {
@@ -409,15 +409,15 @@
     {
       "id": "xpxtEJ-rT",
       "name": "Storage",
-      "x": -629,
-      "y": -548,
+      "x": -647,
+      "y": -418,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "P6O4K3Nkc",
-            "port": "Output"
+            "id": "cbVqy07bJ",
+            "port": "Left"
           }
         },
         {
@@ -426,15 +426,15 @@
         },
         {
           "name": "Value",
-          "value": 120
+          "value": 130
         }
       ]
     },
     {
       "id": "3zj1NCaJb",
       "name": "Splitter",
-      "x": -628,
-      "y": -440,
+      "x": -647,
+      "y": -311,
       "templateName": "Splitter",
       "params": [
         {
@@ -457,8 +457,8 @@
     {
       "id": "SKv9hna0P",
       "name": "Manufacturers",
-      "x": -268,
-      "y": -288,
+      "x": -270,
+      "y": -40,
       "templateName": "Manufacturers",
       "params": [
         {
@@ -498,8 +498,8 @@
     {
       "id": "0np7bxcKe",
       "name": "Splitter",
-      "x": 62,
-      "y": -470,
+      "x": -13,
+      "y": -335,
       "templateName": "Splitter",
       "params": [
         {
@@ -522,8 +522,8 @@
     {
       "id": "QVBybyMJs",
       "name": "Storage",
-      "x": 62,
-      "y": -361,
+      "x": -13,
+      "y": -226,
       "templateName": "Storage",
       "params": [
         {
@@ -540,6 +540,260 @@
         {
           "name": "Value",
           "value": 25
+        }
+      ]
+    },
+    {
+      "id": "98UuvXMG3",
+      "name": "Resource",
+      "x": -921,
+      "y": -467,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Iron Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 240
+        }
+      ]
+    },
+    {
+      "id": "17p4aOnIW",
+      "name": "Smelters",
+      "x": -921,
+      "y": -425,
+      "templateName": "Smelters",
+      "params": [
+        {
+          "name": "Input Ore",
+          "source": {
+            "id": "98UuvXMG3",
+            "port": "Output"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d_GY6C4uo",
+      "name": "Constructors",
+      "x": -921,
+      "y": -380,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "17p4aOnIW",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Iron Plate"
+        }
+      ]
+    },
+    {
+      "id": "SnxYWPK6L",
+      "name": "Storage",
+      "x": -921,
+      "y": -335,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "d_GY6C4uo",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 120
+        }
+      ]
+    },
+    {
+      "id": "ZUSFLr1K0",
+      "name": "Assemblers",
+      "x": -921,
+      "y": -127,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "SnxYWPK6L",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "diHAsdHcA",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Reinforced Iron Plate"
+        }
+      ]
+    },
+    {
+      "id": "diHAsdHcA",
+      "name": "Splitter",
+      "x": -833,
+      "y": -228,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "3zj1NCaJb",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set left"
+        },
+        {
+          "name": "Split",
+          "value": 240
+        }
+      ]
+    },
+    {
+      "id": "EnhDQTQCz",
+      "name": "Splitter",
+      "x": -643,
+      "y": -547,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "P6O4K3Nkc",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set left"
+        },
+        {
+          "name": "Split",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "jBhcWpBD-",
+      "name": "Assemblers",
+      "x": -720,
+      "y": -154,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "diHAsdHcA",
+            "port": "Right"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "EnhDQTQCz",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Rotor"
+        }
+      ]
+    },
+    {
+      "id": "cbVqy07bJ",
+      "name": "Splitter",
+      "x": -631,
+      "y": -497,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "EnhDQTQCz",
+            "port": "Right"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set right"
+        },
+        {
+          "name": "Split",
+          "value": 36
+        }
+      ]
+    },
+    {
+      "id": "fD-BBWO-p",
+      "name": "Assemblers",
+      "x": -385,
+      "y": 189,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "zEC9SoA4S",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "cbVqy07bJ",
+            "port": "Right"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Modular Frame"
+        }
+      ]
+    },
+    {
+      "id": "zEC9SoA4S",
+      "name": "Storage",
+      "x": -919,
+      "y": -82,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "ZUSFLr1K0",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 9
         }
       ]
     }
