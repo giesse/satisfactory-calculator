@@ -6,8 +6,8 @@
     {
       "id": "gdnYobXLT",
       "name": "Resource",
-      "x": -199,
-      "y": -434,
+      "x": 151,
+      "y": -627,
       "templateName": "Resource",
       "params": [
         {
@@ -23,8 +23,8 @@
     {
       "id": "M08f08o0o",
       "name": "Refineries",
-      "x": -210,
-      "y": -375,
+      "x": 140,
+      "y": -568,
       "templateName": "Refineries",
       "params": [
         {
@@ -47,8 +47,8 @@
     {
       "id": "lxXEBugrV",
       "name": "Refineries",
-      "x": -105,
-      "y": -270,
+      "x": 245,
+      "y": -463,
       "templateName": "Refineries",
       "params": [
         {
@@ -71,8 +71,8 @@
     {
       "id": "LbMUaXPxv",
       "name": "Resource",
-      "x": -588,
-      "y": -445,
+      "x": -238,
+      "y": -638,
       "templateName": "Resource",
       "params": [
         {
@@ -88,8 +88,8 @@
     {
       "id": "GnU3Nfp3O",
       "name": "Coal Generators",
-      "x": -105,
-      "y": -210,
+      "x": 245,
+      "y": -403,
       "templateName": "Coal Generators",
       "params": [
         {
@@ -104,8 +104,8 @@
     {
       "id": "_GGPrfqmg",
       "name": "Storage",
-      "x": -300,
-      "y": -300,
+      "x": 50,
+      "y": -493,
       "templateName": "Storage",
       "params": [
         {
@@ -124,8 +124,8 @@
     {
       "id": "fj39vptY7",
       "name": "Smelters",
-      "x": -588,
-      "y": -400,
+      "x": -238,
+      "y": -593,
       "templateName": "Smelters",
       "params": [
         {
@@ -140,8 +140,8 @@
     {
       "id": "p-FsXSdJb",
       "name": "Constructors",
-      "x": -588,
-      "y": -340,
+      "x": -238,
+      "y": -533,
       "templateName": "Constructors",
       "params": [
         {
@@ -160,8 +160,8 @@
     {
       "id": "Ap1hjD296",
       "name": "Storage",
-      "x": -588,
-      "y": -295,
+      "x": -238,
+      "y": -488,
       "templateName": "Storage",
       "params": [
         {
@@ -180,8 +180,8 @@
     {
       "id": "6NaBTo_2C",
       "name": "Assemblers",
-      "x": -456,
-      "y": -136,
+      "x": -106,
+      "y": -329,
       "templateName": "Assemblers",
       "params": [
         {
@@ -207,8 +207,8 @@
     {
       "id": "asrjj3MJF",
       "name": "Resource",
-      "x": -839,
-      "y": -450,
+      "x": -489,
+      "y": -643,
       "templateName": "Resource",
       "params": [
         {
@@ -224,8 +224,8 @@
     {
       "id": "7HfzWgHKc",
       "name": "Smelters",
-      "x": -839,
-      "y": -404,
+      "x": -489,
+      "y": -597,
       "templateName": "Smelters",
       "params": [
         {
@@ -240,8 +240,8 @@
     {
       "id": "xwEzEtnpz",
       "name": "Constructors",
-      "x": -839,
-      "y": -353,
+      "x": -489,
+      "y": -546,
       "templateName": "Constructors",
       "params": [
         {
@@ -260,8 +260,8 @@
     {
       "id": "x-R1kcimb",
       "name": "Constructors",
-      "x": -839,
-      "y": -234,
+      "x": -489,
+      "y": -427,
       "templateName": "Constructors",
       "params": [
         {
@@ -280,8 +280,8 @@
     {
       "id": "FwPLAQYxc",
       "name": "Storage",
-      "x": -839,
-      "y": -299,
+      "x": -489,
+      "y": -492,
       "templateName": "Storage",
       "params": [
         {
@@ -300,8 +300,8 @@
     {
       "id": "d-oNZSDbw",
       "name": "Storage",
-      "x": -838,
-      "y": -178,
+      "x": -488,
+      "y": -371,
       "templateName": "Storage",
       "params": [
         {
@@ -314,6 +314,99 @@
         {
           "name": "Storage",
           "value": 10
+        }
+      ]
+    },
+    {
+      "id": "QoPBW6Ix4",
+      "name": "Resource",
+      "x": -764,
+      "y": -638,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Iron Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 270
+        }
+      ]
+    },
+    {
+      "id": "wT_T_NQOB",
+      "name": "Smelters",
+      "x": -764,
+      "y": -591,
+      "templateName": "Smelters",
+      "params": [
+        {
+          "name": "Input Ore",
+          "source": {
+            "id": "QoPBW6Ix4",
+            "port": "Output"
+          }
+        }
+      ]
+    },
+    {
+      "id": "P6O4K3Nkc",
+      "name": "Constructors",
+      "x": -764,
+      "y": -535,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "wT_T_NQOB",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Iron Rod"
+        }
+      ]
+    },
+    {
+      "id": "LO3yFfdeI",
+      "name": "Constructors",
+      "x": -763,
+      "y": -421,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "xpxtEJ-rT",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Screw"
+        }
+      ]
+    },
+    {
+      "id": "xpxtEJ-rT",
+      "name": "Storage",
+      "x": -763,
+      "y": -483,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "P6O4K3Nkc",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Storage",
+          "value": 150
         }
       ]
     }
