@@ -6,8 +6,7 @@ module.exports = (node, graph) => {
     output = node.out('Output', {slug:'coal',amount:60})
 
   function update() {
-    output.value.slug = resourceMap[resource.value]
-    output.value.amount = amount.value
+    output.setValue({slug: resourceMap[resource.value], amount: amount.value})
     node.comment = `${amount.value} ${resource.value}/min`
   }
   update()
