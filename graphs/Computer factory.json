@@ -16,7 +16,7 @@
         },
         {
           "name": "Amount",
-          "value": 240
+          "value": 270
         }
       ]
     },
@@ -24,7 +24,7 @@
       "id": "M08f08o0o",
       "name": "Refineries",
       "x": 140,
-      "y": -568,
+      "y": -587,
       "templateName": "Refineries",
       "params": [
         {
@@ -47,8 +47,8 @@
     {
       "id": "lxXEBugrV",
       "name": "Refineries",
-      "x": 245,
-      "y": -463,
+      "x": 243,
+      "y": -502,
       "templateName": "Refineries",
       "params": [
         {
@@ -71,8 +71,8 @@
     {
       "id": "LbMUaXPxv",
       "name": "Resource",
-      "x": -238,
-      "y": -638,
+      "x": -155,
+      "y": -683,
       "templateName": "Resource",
       "params": [
         {
@@ -88,8 +88,8 @@
     {
       "id": "GnU3Nfp3O",
       "name": "Coal Generators",
-      "x": 245,
-      "y": -403,
+      "x": 243,
+      "y": -454,
       "templateName": "Coal Generators",
       "params": [
         {
@@ -104,8 +104,8 @@
     {
       "id": "_GGPrfqmg",
       "name": "Storage",
-      "x": 50,
-      "y": -493,
+      "x": 62,
+      "y": -531,
       "templateName": "Storage",
       "params": [
         {
@@ -116,16 +116,20 @@
           }
         },
         {
-          "name": "Storage",
-          "value": 10
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 165
         }
       ]
     },
     {
       "id": "fj39vptY7",
       "name": "Smelters",
-      "x": -238,
-      "y": -593,
+      "x": -155,
+      "y": -646,
       "templateName": "Smelters",
       "params": [
         {
@@ -140,8 +144,8 @@
     {
       "id": "p-FsXSdJb",
       "name": "Constructors",
-      "x": -238,
-      "y": -533,
+      "x": -155,
+      "y": -603,
       "templateName": "Constructors",
       "params": [
         {
@@ -160,8 +164,8 @@
     {
       "id": "Ap1hjD296",
       "name": "Storage",
-      "x": -238,
-      "y": -488,
+      "x": -155,
+      "y": -558,
       "templateName": "Storage",
       "params": [
         {
@@ -172,16 +176,20 @@
           }
         },
         {
-          "name": "Storage",
-          "value": 15
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 60
         }
       ]
     },
     {
       "id": "6NaBTo_2C",
       "name": "Assemblers",
-      "x": -106,
-      "y": -329,
+      "x": 62,
+      "y": -411,
       "templateName": "Assemblers",
       "params": [
         {
@@ -194,8 +202,8 @@
         {
           "name": "Input 2",
           "source": {
-            "id": "_GGPrfqmg",
-            "port": "Output"
+            "id": "0np7bxcKe",
+            "port": "Right"
           }
         },
         {
@@ -207,8 +215,8 @@
     {
       "id": "asrjj3MJF",
       "name": "Resource",
-      "x": -489,
-      "y": -643,
+      "x": -389,
+      "y": -680,
       "templateName": "Resource",
       "params": [
         {
@@ -224,8 +232,8 @@
     {
       "id": "7HfzWgHKc",
       "name": "Smelters",
-      "x": -489,
-      "y": -597,
+      "x": -389,
+      "y": -642,
       "templateName": "Smelters",
       "params": [
         {
@@ -240,8 +248,8 @@
     {
       "id": "xwEzEtnpz",
       "name": "Constructors",
-      "x": -489,
-      "y": -546,
+      "x": -389,
+      "y": -595,
       "templateName": "Constructors",
       "params": [
         {
@@ -260,8 +268,8 @@
     {
       "id": "x-R1kcimb",
       "name": "Constructors",
-      "x": -489,
-      "y": -427,
+      "x": -389,
+      "y": -486,
       "templateName": "Constructors",
       "params": [
         {
@@ -280,8 +288,8 @@
     {
       "id": "FwPLAQYxc",
       "name": "Storage",
-      "x": -489,
-      "y": -492,
+      "x": -389,
+      "y": -547,
       "templateName": "Storage",
       "params": [
         {
@@ -292,16 +300,20 @@
           }
         },
         {
-          "name": "Storage",
-          "value": 30
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 90
         }
       ]
     },
     {
       "id": "d-oNZSDbw",
       "name": "Storage",
-      "x": -488,
-      "y": -371,
+      "x": -389,
+      "y": -439,
       "templateName": "Storage",
       "params": [
         {
@@ -312,16 +324,20 @@
           }
         },
         {
-          "name": "Storage",
-          "value": 10
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 22.5
         }
       ]
     },
     {
       "id": "QoPBW6Ix4",
       "name": "Resource",
-      "x": -764,
-      "y": -638,
+      "x": -629,
+      "y": -678,
       "templateName": "Resource",
       "params": [
         {
@@ -337,8 +353,8 @@
     {
       "id": "wT_T_NQOB",
       "name": "Smelters",
-      "x": -764,
-      "y": -591,
+      "x": -629,
+      "y": -641,
       "templateName": "Smelters",
       "params": [
         {
@@ -353,8 +369,8 @@
     {
       "id": "P6O4K3Nkc",
       "name": "Constructors",
-      "x": -764,
-      "y": -535,
+      "x": -629,
+      "y": -594,
       "templateName": "Constructors",
       "params": [
         {
@@ -373,8 +389,8 @@
     {
       "id": "LO3yFfdeI",
       "name": "Constructors",
-      "x": -763,
-      "y": -421,
+      "x": -629,
+      "y": -488,
       "templateName": "Constructors",
       "params": [
         {
@@ -393,8 +409,8 @@
     {
       "id": "xpxtEJ-rT",
       "name": "Storage",
-      "x": -763,
-      "y": -483,
+      "x": -629,
+      "y": -548,
       "templateName": "Storage",
       "params": [
         {
@@ -405,8 +421,117 @@
           }
         },
         {
-          "name": "Storage",
-          "value": 150
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 120
+        }
+      ]
+    },
+    {
+      "id": "3zj1NCaJb",
+      "name": "Splitter",
+      "x": -628,
+      "y": -440,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "LO3yFfdeI",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Split",
+          "value": 350
+        }
+      ]
+    },
+    {
+      "id": "SKv9hna0P",
+      "name": "Manufacturers",
+      "x": -268,
+      "y": -288,
+      "templateName": "Manufacturers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "3zj1NCaJb",
+            "port": "Right"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "d-oNZSDbw",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 3",
+          "source": {
+            "id": "0np7bxcKe",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Input 4",
+          "source": {
+            "id": "QVBybyMJs",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Computer"
+        }
+      ]
+    },
+    {
+      "id": "0np7bxcKe",
+      "name": "Splitter",
+      "x": 62,
+      "y": -470,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "_GGPrfqmg",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Split",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "id": "QVBybyMJs",
+      "name": "Storage",
+      "x": 62,
+      "y": -361,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "6NaBTo_2C",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 25
         }
       ]
     }
