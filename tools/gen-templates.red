@@ -16,13 +16,11 @@ foreach item values-of data/items [
 ]
 
 output/resources: #()
-output/reverse-resources: #()
-output/resource-list: []
+;output/reverseResources: #()
 foreach resource values-of data/resources [
     resource/item: select data/items to word! resource/item
     put output/resources resource/item/name resource/item/slug
-    put output/reverse-resources resource/item/slug resource/item/name
-    append output/resource-list resource/item/name
+    ;put output/reverseResources resource/item/slug resource/item/name
 ]
 
 foreach miner values-of data/miners [
@@ -140,5 +138,5 @@ foreach fuel gendata/fuel [
     outfuel/amount: coalgen/powerProduction * factor / fuel/energyValue
 ]
 
-;write %output.json to-json/pretty output "  "
-save %output.json output
+write %../node_modules/satisfactory/data.json to-json/pretty output "  "
+;save %output.json output

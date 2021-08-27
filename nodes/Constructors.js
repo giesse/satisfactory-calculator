@@ -1,26 +1,30 @@
 module.exports = (node, graph) => {
-  const recipes = {"Alternate: Charcoal":{"ingredients":{"wood":{"name":"Wood","amount":15}},"product":{"slug":"coal","name":"Coal","amount":150}},"Alternate: Biocoal":{"ingredients":{"biomass":{"name":"Biomass","amount":37.5}},"product":{"slug":"coal","name":"Coal","amount":45.0}},"Alternate: Steel Screw":{"ingredients":{"steel-beam":{"name":"Steel Beam","amount":5}},"product":{"slug":"screw","name":"Screw","amount":260}},"Alternate: Cast Screw":{"ingredients":{"iron-ingot":{"name":"Iron Ingot","amount":12.5}},"product":{"slug":"screw","name":"Screw","amount":50.0}},"Alternate: Steel Canister":{"ingredients":{"steel-ingot":{"name":"Steel Ingot","amount":60}},"product":{"slug":"empty-canister","name":"Empty Canister","amount":40}},"Alternate: Steel Rod":{"ingredients":{"steel-ingot":{"name":"Steel Ingot","amount":12}},"product":{"slug":"iron-rod","name":"Iron Rod","amount":48}},"Alternate: Iron Wire":{"ingredients":{"iron-ingot":{"name":"Iron Ingot","amount":12.5}},"product":{"slug":"wire","name":"Wire","amount":22.5}},"Alternate: Caterium Wire":{"ingredients":{"caterium-ingot":{"name":"Caterium Ingot","amount":15}},"product":{"slug":"wire","name":"Wire","amount":120}},"Aluminum Casing":{"ingredients":{"aluminum-ingot":{"name":"Aluminum Ingot","amount":90}},"product":{"slug":"aluminum-casing","name":"Aluminum Casing","amount":60}},"Solid Biofuel":{"ingredients":{"biomass":{"name":"Biomass","amount":120}},"product":{"slug":"solid-biofuel","name":"Solid Biofuel","amount":60}},"Biomass (Alien Carapace)":{"ingredients":{"alien-carapace":{"name":"Alien Carapace","amount":15}},"product":{"slug":"biomass","name":"Biomass","amount":1500}},"Biomass (Alien Organs)":{"ingredients":{"alien-organs":{"name":"Alien Organs","amount":7.5}},"product":{"slug":"biomass","name":"Biomass","amount":1500.0}},"Biomass (Leaves)":{"ingredients":{"leaves":{"name":"Leaves","amount":120}},"product":{"slug":"biomass","name":"Biomass","amount":60}},"Biomass (Mycelia)":{"ingredients":{"mycelia":{"name":"Mycelia","amount":150}},"product":{"slug":"biomass","name":"Biomass","amount":150}},"Biomass (Wood)":{"ingredients":{"wood":{"name":"Wood","amount":60}},"product":{"slug":"biomass","name":"Biomass","amount":300}},"Cable":{"ingredients":{"wire":{"name":"Wire","amount":60}},"product":{"slug":"cable","name":"Cable","amount":30}},"Color Cartridge":{"ingredients":{"flower-petals":{"name":"Flower Petals","amount":37.5}},"product":{"slug":"color-cartridge","name":"Color Cartridge","amount":75.0}},"Concrete":{"ingredients":{"limestone":{"name":"Limestone","amount":45}},"product":{"slug":"concrete","name":"Concrete","amount":15}},"Copper Powder":{"ingredients":{"copper-ingot":{"name":"Copper Ingot","amount":300}},"product":{"slug":"copper-powder","name":"Copper Powder","amount":50}},"Copper Sheet":{"ingredients":{"copper-ingot":{"name":"Copper Ingot","amount":20}},"product":{"slug":"copper-sheet","name":"Copper Sheet","amount":10}},"Empty Canister":{"ingredients":{"plastic":{"name":"Plastic","amount":30}},"product":{"slug":"empty-canister","name":"Empty Canister","amount":60}},"Empty Fluid Tank":{"ingredients":{"aluminum-ingot":{"name":"Aluminum Ingot","amount":60}},"product":{"slug":"empty-fluid-tank","name":"Empty Fluid Tank","amount":60}},"Iron Plate":{"ingredients":{"iron-ingot":{"name":"Iron Ingot","amount":30}},"product":{"slug":"iron-plate","name":"Iron Plate","amount":20}},"Iron Rod":{"ingredients":{"iron-ingot":{"name":"Iron Ingot","amount":15}},"product":{"slug":"iron-rod","name":"Iron Rod","amount":15}},"Power Shard (1)":{"ingredients":{"green-power-slug":{"name":"Green Power Slug","amount":7.5}},"product":{"slug":"power-shard","name":"Power Shard","amount":7.5}},"Power Shard (2)":{"ingredients":{"yellow-power-slug":{"name":"Yellow Power Slug","amount":5}},"product":{"slug":"power-shard","name":"Power Shard","amount":10}},"Power Shard (5)":{"ingredients":{"purple-power-slug":{"name":"Purple Power Slug","amount":2.5}},"product":{"slug":"power-shard","name":"Power Shard","amount":12.5}},"Quartz Crystal":{"ingredients":{"raw-quartz":{"name":"Raw Quartz","amount":37.5}},"product":{"slug":"quartz-crystal","name":"Quartz Crystal","amount":22.5}},"Quickwire":{"ingredients":{"caterium-ingot":{"name":"Caterium Ingot","amount":12}},"product":{"slug":"quickwire","name":"Quickwire","amount":60}},"Screw":{"ingredients":{"iron-rod":{"name":"Iron Rod","amount":10}},"product":{"slug":"screw","name":"Screw","amount":40}},"Silica":{"ingredients":{"raw-quartz":{"name":"Raw Quartz","amount":22.5}},"product":{"slug":"silica","name":"Silica","amount":37.5}},"Spiked Rebar":{"ingredients":{"iron-rod":{"name":"Iron Rod","amount":15}},"product":{"slug":"spiked-rebar","name":"Spiked Rebar","amount":15}},"Steel Beam":{"ingredients":{"steel-ingot":{"name":"Steel Ingot","amount":60}},"product":{"slug":"steel-beam","name":"Steel Beam","amount":15}},"Steel Pipe":{"ingredients":{"steel-ingot":{"name":"Steel Ingot","amount":30}},"product":{"slug":"steel-pipe","name":"Steel Pipe","amount":20}},"Wire":{"ingredients":{"copper-ingot":{"name":"Copper Ingot","amount":15}},"product":{"slug":"wire","name":"Wire","amount":30}}},
-    input = node.in("Input", {}),
-    recipeSelector = node.in("Recipe", "Iron Plate", {type: 'dropdown', values: Object.keys(recipes)}),
-    output = node.out("Output", {})
+  const satisfactory = require('satisfactory'),
+        recipes = satisfactory.data.recipes.constructors,
+        input = node.in("Input", {}),
+        recipeSelector = node.in("Recipe", "Iron Plate", {type: 'dropdown', values: Object.keys(recipes)}),
+        constructorsPerFloor = node.in("Constructors per floor", 4),
+        powerShards = node.in("Power shards", 0),
+        output = node.out("Output", {})
 
   function update() {
     const recipe = recipes[recipeSelector.value],
       ingredient = recipe.ingredients[input.value.slug]
     if (ingredient) {
-      const constructorsPerFloor = 4,
-        floors = Math.ceil(input.value.amount / (ingredient.amount * constructorsPerFloor)),
-        clock = input.value.amount / (ingredient.amount * constructorsPerFloor * floors)
-      output.setValue({slug: recipe.product.slug, amount: recipe.product.amount * constructorsPerFloor * floors * clock})
-      node.comment = `${floors} floors of ${constructorsPerFloor} Constructors @ ${Math.round(clock * 10000) / 100}%
-Producing ${output.value.amount} ${recipe.product.name}/min`
+      const machines = satisfactory.computeMachines({
+          inputAmount: input.value.amount,
+          recipeInputAmount: ingredient.amount,
+          recipeOutputAmount: recipe.product.amount,
+          perFloor: constructorsPerFloor.value,
+          powerShards: powerShards.value
+      })
+      output.setValue({slug: recipe.product.slug, amount: machines.outputAmount})
+      node.comment = satisfactory.renderMachines(machines, {machinesName: 'constructors', productName: recipe.product.name})
     } else {
       output.setValue({})
       node.comment = "Invalid input!"
     }
   }
   update()
-  for (let inp of [input, recipeSelector]) {
-    inp.onChange = update
-  }
+  for (let inp of [input, recipeSelector, constructorsPerFloor, powerShards]) inp.onChange = update
 };

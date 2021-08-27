@@ -1,18 +1,24 @@
 module.exports = (node, graph) => {
-  const recipes = {"caterium-ore":{"ingredientName":"Caterium Ore","ingredientAmount":45,"productSlug":"caterium-ingot","productName":"Caterium Ingot","productAmount":15},"copper-ore":{"ingredientName":"Copper Ore","ingredientAmount":30,"productSlug":"copper-ingot","productName":"Copper Ingot","productAmount":30},"iron-ore":{"ingredientName":"Iron Ore","ingredientAmount":30,"productSlug":"iron-ingot","productName":"Iron Ingot","productAmount":30},"aluminum-scrap":{"ingredientName":"Aluminum Scrap","ingredientAmount":60,"productSlug":"aluminum-ingot","productName":"Aluminum Ingot","productAmount":30}},
-    inputOre = node.in("Input Ore", {}),
-    outputIngots = node.out("Output", {})
+  const satisfactory = require('satisfactory'),
+        recipes = satisfactory.data.recipes.smelters,
+        inputOre = node.in("Input Ore", {}),
+        smeltersPerFloor = node.in("Smelters per floor", 6),
+        powerShards = node.in("Power shards", 0),
+        outputIngots = node.out("Output", {})
   
   function update() {
     if (inputOre.value.slug) {
       const recipe = recipes[inputOre.value.slug]
       if (recipe) {
-        const smeltersPerFloor = 6,
-          floors = Math.ceil(inputOre.value.amount / (recipe.ingredientAmount * smeltersPerFloor)),
-          clock = inputOre.value.amount / (floors * smeltersPerFloor * recipe.ingredientAmount)
-        outputIngots.setValue({slug: recipe.productSlug, amount: recipe.productAmount * floors * smeltersPerFloor * clock})
-        node.comment = `${floors} floors of ${smeltersPerFloor} smelters @ ${Math.round(clock * 10000) / 100}%
-Producing ${outputIngots.value.amount} ${recipe.productName}/min`
+        const machines = satisfactory.computeMachines({
+            inputAmount: inputOre.value.amount,
+            recipeInputAmount: recipe.ingredientAmount,
+            recipeOutputAmount: recipe.productAmount,
+            perFloor: smeltersPerFloor.value,
+            powerShards: powerShards.value
+        })
+        outputIngots.setValue({slug: recipe.productSlug, amount: machines.outputAmount})
+        node.comment = satisfactory.renderMachines(machines, {machinesName: 'smelters', productName: recipe.productName})
       } else {
         node.comment = "Invalid input!"
         outputIngots.setValue({})
@@ -23,5 +29,5 @@ Producing ${outputIngots.value.amount} ${recipe.productName}/min`
     }
   }
   update()
-  inputOre.onChange = update
+  for (inp of [inputOre, smeltersPerFloor, powerShards]) inp.onChange = update
 };

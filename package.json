@@ -1,5 +1,8 @@
 {
   "name": "Satisfactory",
   "description": "New empty project",
-  "private": true
+  "private": true,
+  "dependencies": {
+      "satisfactory": "1.0.0"
+  }
 }
