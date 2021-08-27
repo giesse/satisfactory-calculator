@@ -1,54 +1,40 @@
 module.exports = (node, graph) => {
-  const recipes = {"Alternate: Automated Miner":{"ingredients":{"motor":{"name":"Motor","amount":1},"steel-pipe":{"name":"Steel Pipe","amount":4},"iron-rod":{"name":"Iron Rod","amount":4},"iron-plate":{"name":"Iron Plate","amount":2}},"product":{"slug":"portable-miner","name":"Portable Miner","amount":1}},"Alternate: Crystal Beacon":{"ingredients":{"steel-beam":{"name":"Steel Beam","amount":2.0},"steel-pipe":{"name":"Steel Pipe","amount":8.0},"crystal-oscillator":{"name":"Crystal Oscillator","amount":0.5}},"product":{"slug":"beacon","name":"Beacon","amount":10.0}},"Alternate: Classic Battery":{"ingredients":{"sulfur":{"name":"Sulfur","amount":45.0},"alclad-aluminum-sheet":{"name":"Alclad Aluminum Sheet","amount":52.5},"plastic":{"name":"Plastic","amount":60.0},"wire":{"name":"Wire","amount":90.0}},"product":{"slug":"battery","name":"Battery","amount":30.0}},"Alternate: Caterium Computer":{"ingredients":{"circuit-board":{"name":"Circuit Board","amount":26.25},"quickwire":{"name":"Quickwire","amount":105.0},"rubber":{"name":"Rubber","amount":45.0}},"product":{"slug":"computer","name":"Computer","amount":3.75}},"Alternate: Insulated Crystal Oscillator":{"ingredients":{"quartz-crystal":{"name":"Quartz Crystal","amount":18.75},"rubber":{"name":"Rubber","amount":13.125},"ai-limiter":{"name":"AI Limiter","amount":1.875}},"product":{"slug":"crystal-oscillator","name":"Crystal Oscillator","amount":1.875}},"Alternate: Flexible Framework":{"ingredients":{"modular-frame":{"name":"Modular Frame","amount":3.75},"steel-beam":{"name":"Steel Beam","amount":22.5},"rubber":{"name":"Rubber","amount":30.0}},"product":{"slug":"versatile-framework","name":"Versatile Framework","amount":7.5}},"Alternate: Heavy Flexible Frame":{"ingredients":{"modular-frame":{"name":"Modular Frame","amount":18.75},"encased-industrial-beam":{"name":"Encased Industrial Beam","amount":11.25},"rubber":{"name":"Rubber","amount":75.0},"screw":{"name":"Screw","amount":390.0}},"product":{"slug":"heavy-modular-frame","name":"Heavy Modular Frame","amount":3.75}},"Alternate: Silicon High-Speed Connector":{"ingredients":{"quickwire":{"name":"Quickwire","amount":90.0},"silica":{"name":"Silica","amount":37.5},"circuit-board":{"name":"Circuit Board","amount":3.0}},"product":{"slug":"high-speed-connector","name":"High-Speed Connector","amount":3.0}},"Alternate: Automated Speed Wiring":{"ingredients":{"stator":{"name":"Stator","amount":3.75},"wire":{"name":"Wire","amount":75.0},"high-speed-connector":{"name":"High-Speed Connector","amount":1.875}},"product":{"slug":"automated-wiring","name":"Automated Wiring","amount":7.5}},"Alternate: Heavy Encased Frame":{"ingredients":{"modular-frame":{"name":"Modular Frame","amount":7.5},"encased-industrial-beam":{"name":"Encased Industrial Beam","amount":9.375},"steel-pipe":{"name":"Steel Pipe","amount":33.75},"concrete":{"name":"Concrete","amount":20.625}},"product":{"slug":"heavy-modular-frame","name":"Heavy Modular Frame","amount":2.8125}},"Alternate: Rigour Motor":{"ingredients":{"rotor":{"name":"Rotor","amount":3.75},"stator":{"name":"Stator","amount":3.75},"crystal-oscillator":{"name":"Crystal Oscillator","amount":1.25}},"product":{"slug":"motor","name":"Motor","amount":7.5}},"Alternate: Seismic Nobelisk":{"ingredients":{"black-powder":{"name":"Black Powder","amount":12.0},"steel-pipe":{"name":"Steel Pipe","amount":12.0},"crystal-oscillator":{"name":"Crystal Oscillator","amount":1.5}},"product":{"slug":"nobelisk","name":"Nobelisk","amount":6.0}},"Alternate: Uranium Fuel Unit":{"ingredients":{"encased-uranium-cell":{"name":"Encased Uranium Cell","amount":20.0},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":2.0},"crystal-oscillator":{"name":"Crystal Oscillator","amount":0.6},"beacon":{"name":"Beacon","amount":1.2}},"product":{"slug":"uranium-fuel-rod","name":"Uranium Fuel Rod","amount":0.6}},"Alternate: Plastic Smart Plating":{"ingredients":{"reinforced-iron-plate":{"name":"Reinforced Iron Plate","amount":2.5},"rotor":{"name":"Rotor","amount":2.5},"plastic":{"name":"Plastic","amount":7.5}},"product":{"slug":"smart-plating","name":"Smart Plating","amount":5.0}},"Alternate: Radio Control System":{"ingredients":{"crystal-oscillator":{"name":"Crystal Oscillator","amount":1.5},"circuit-board":{"name":"Circuit Board","amount":15.0},"aluminum-casing":{"name":"Aluminum Casing","amount":90.0},"rubber":{"name":"Rubber","amount":45.0}},"product":{"slug":"radio-control-unit","name":"Radio Control Unit","amount":4.5}},"Alternate: Radio Connection Unit":{"ingredients":{"heat-sink":{"name":"Heat Sink","amount":15.0},"high-speed-connector":{"name":"High-Speed Connector","amount":7.5},"quartz-crystal":{"name":"Quartz Crystal","amount":45.0}},"product":{"slug":"radio-control-unit","name":"Radio Control Unit","amount":3.75}},"Alternate: Super-State Computer":{"ingredients":{"computer":{"name":"Computer","amount":3.6},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":2.4},"battery":{"name":"Battery","amount":24.0},"wire":{"name":"Wire","amount":54.0}},"product":{"slug":"supercomputer","name":"Supercomputer","amount":2.4}},"Alternate: Turbo Electric Motor":{"ingredients":{"motor":{"name":"Motor","amount":6.5625},"radio-control-unit":{"name":"Radio Control Unit","amount":8.4375},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":4.6875},"rotor":{"name":"Rotor","amount":6.5625}},"product":{"slug":"turbo-motor","name":"Turbo Motor","amount":2.8125}},"Alternate: Turbo Pressure Motor":{"ingredients":{"motor":{"name":"Motor","amount":7.5},"pressure-conversion-cube":{"name":"Pressure Conversion Cube","amount":1.875},"packaged-nitrogen-gas":{"name":"Packaged Nitrogen Gas","amount":45.0},"stator":{"name":"Stator","amount":15.0}},"product":{"slug":"turbo-motor","name":"Turbo Motor","amount":3.75}},"Alternate: Infused Uranium Cell":{"ingredients":{"uranium":{"name":"Uranium","amount":25},"silica":{"name":"Silica","amount":15},"sulfur":{"name":"Sulfur","amount":25},"quickwire":{"name":"Quickwire","amount":75}},"product":{"slug":"encased-uranium-cell","name":"Encased Uranium Cell","amount":20}},"Beacon":{"ingredients":{"iron-plate":{"name":"Iron Plate","amount":22.5},"iron-rod":{"name":"Iron Rod","amount":7.5},"wire":{"name":"Wire","amount":112.5},"cable":{"name":"Cable","amount":15.0}},"product":{"slug":"beacon","name":"Beacon","amount":7.5}},"Rifle Cartridge":{"ingredients":{"beacon":{"name":"Beacon","amount":3},"steel-pipe":{"name":"Steel Pipe","amount":30},"black-powder":{"name":"Black Powder","amount":30},"rubber":{"name":"Rubber","amount":30}},"product":{"slug":"rifle-cartridge","name":"Rifle Cartridge","amount":15}},"Supercomputer":{"ingredients":{"computer":{"name":"Computer","amount":3.75},"ai-limiter":{"name":"AI Limiter","amount":3.75},"high-speed-connector":{"name":"High-Speed Connector","amount":5.625},"plastic":{"name":"Plastic","amount":52.5}},"product":{"slug":"supercomputer","name":"Supercomputer","amount":1.875}},"Computer":{"ingredients":{"circuit-board":{"name":"Circuit Board","amount":25.0},"cable":{"name":"Cable","amount":22.5},"plastic":{"name":"Plastic","amount":45.0},"screw":{"name":"Screw","amount":130.0}},"product":{"slug":"computer","name":"Computer","amount":2.5}},"Crystal Oscillator":{"ingredients":{"quartz-crystal":{"name":"Quartz Crystal","amount":18.0},"cable":{"name":"Cable","amount":14.0},"reinforced-iron-plate":{"name":"Reinforced Iron Plate","amount":2.5}},"product":{"slug":"crystal-oscillator","name":"Crystal Oscillator","amount":1.0}},"Gas Filter":{"ingredients":{"coal":{"name":"Coal","amount":37.5},"rubber":{"name":"Rubber","amount":15.0},"fabric":{"name":"Fabric","amount":15.0}},"product":{"slug":"gas-filter","name":"Gas Filter","amount":7.5}},"Iodine Infused Filter":{"ingredients":{"gas-filter":{"name":"Gas Filter","amount":3.75},"quickwire":{"name":"Quickwire","amount":30.0},"aluminum-casing":{"name":"Aluminum Casing","amount":3.75}},"product":{"slug":"iodine-infused-filter","name":"Iodine Infused Filter","amount":3.75}},"High-Speed Connector":{"ingredients":{"quickwire":{"name":"Quickwire","amount":210.0},"cable":{"name":"Cable","amount":37.5},"circuit-board":{"name":"Circuit Board","amount":3.75}},"product":{"slug":"high-speed-connector","name":"High-Speed Connector","amount":3.75}},"Heavy Modular Frame":{"ingredients":{"modular-frame":{"name":"Modular Frame","amount":10},"steel-pipe":{"name":"Steel Pipe","amount":30},"encased-industrial-beam":{"name":"Encased Industrial Beam","amount":10},"screw":{"name":"Screw","amount":200}},"product":{"slug":"heavy-modular-frame","name":"Heavy Modular Frame","amount":2}},"Turbo Motor":{"ingredients":{"cooling-system":{"name":"Cooling System","amount":7.5},"radio-control-unit":{"name":"Radio Control Unit","amount":3.75},"motor":{"name":"Motor","amount":7.5},"rubber":{"name":"Rubber","amount":45.0}},"product":{"slug":"turbo-motor","name":"Turbo Motor","amount":1.875}},"Uranium Fuel Rod":{"ingredients":{"encased-uranium-cell":{"name":"Encased Uranium Cell","amount":20.0},"encased-industrial-beam":{"name":"Encased Industrial Beam","amount":1.2},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":2.0}},"product":{"slug":"uranium-fuel-rod","name":"Uranium Fuel Rod","amount":0.4}},"Plutonium Fuel Rod":{"ingredients":{"encased-plutonium-cell":{"name":"Encased Plutonium Cell","amount":7.5},"steel-beam":{"name":"Steel Beam","amount":4.5},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":1.5},"heat-sink":{"name":"Heat Sink","amount":2.5}},"product":{"slug":"plutonium-fuel-rod","name":"Plutonium Fuel Rod","amount":0.25}},"Radio Control Unit":{"ingredients":{"aluminum-casing":{"name":"Aluminum Casing","amount":40.0},"crystal-oscillator":{"name":"Crystal Oscillator","amount":1.25},"computer":{"name":"Computer","amount":1.25}},"product":{"slug":"radio-control-unit","name":"Radio Control Unit","amount":2.5}},
-    "Modular Engine":{"ingredients":{"motor":{"name":"Motor","amount":2},"rubber":{"name":"Rubber","amount":15},"smart-plating":{"name":"Smart Plating","amount":2}},"product":{"slug":"modular-engine","name":"Modular Engine","amount":1}},"Adaptive Control Unit":{"ingredients":{"automated-wiring":{"name":"Automated Wiring","amount":7.5},"circuit-board":{"name":"Circuit Board","amount":5.0},"heavy-modular-frame":{"name":"Heavy Modular Frame","amount":1.0},"computer":{"name":"Computer","amount":1.0}},"product":{"slug":"adaptive-control-unit","name":"Adaptive Control Unit","amount":1.0}},"Magnetic Field Generator":{"ingredients":{"versatile-framework":{"name":"Versatile Framework","amount":2.5},"electromagnetic-control-rod":{"name":"Electromagnetic Control Rod","amount":1.0},"battery":{"name":"Battery","amount":5.0}},"product":{"slug":"magnetic-field-generator","name":"Magnetic Field Generator","amount":1.0}},"Thermal Propulsion Rocket":{"ingredients":{"modular-engine":{"name":"Modular Engine","amount":2.5},"turbo-motor":{"name":"Turbo Motor","amount":1.0},"cooling-system":{"name":"Cooling System","amount":3.0},"fused-modular-frame":{"name":"Fused Modular Frame","amount":1.0}},"product":{"slug":"thermal-propulsion-rocket","name":"Thermal Propulsion Rocket","amount":1.0}}},
+  const satisfactory = require('satisfactory'),
+    recipes = satisfactory.data.recipes.manufacturers,
     input1 = node.in("Input 1", {}),
     input2 = node.in("Input 2", {}),
     input3 = node.in("Input 3", {}),
     input4 = node.in("Input 4", {}),
     recipeSelector = node.in("Recipe", "Computer", {type: 'dropdown', values: Object.keys(recipes)}),
+    manufacturersPerFloor = node.in("Manufacturers per floor", 1),
+    powerShards = node.in("Power shards", 0),
     output = node.out("Output", {})
 
   function update() {
     const recipe = recipes[recipeSelector.value]
-    // use first input as a base
-    if (input1.value.slug && recipe.ingredients[input1.value.slug]) {
-      const manufacturers = Math.ceil(input1.value.amount / recipe.ingredients[input1.value.slug].amount),
-        clock = input1.value.amount / (recipe.ingredients[input1.value.slug].amount * manufacturers)
-      // check if inputs are valid and match
-      let inputs = {}, validInputs = true, expectedInputs = {}
-      for (let slug in recipe.ingredients) {
-        expectedInputs[slug] = recipe.ingredients[slug].amount * manufacturers * clock
-      }
-      for (let inp of [input1, input2, input3, input4]) {
-        if (inp.value.slug) inputs[inp.value.slug] = inp.value.amount
-      }
-      for (let slug in expectedInputs) {
-        if (inputs[slug] == expectedInputs[slug]) delete inputs[slug]
-        else validInputs = false
-      }
-      if (validInputs) {
-        output.setValue({slug: recipe.product.slug, amount: recipe.product.amount * manufacturers * clock})
-        node.comment = `${manufacturers} Manufacturers @ ${Math.round(clock * 10000) / 100}%
-Producing ${output.value.amount} ${recipe.product.name}/min`
-      } else {
-        output.setValue({})
-        node.comment = `Invalid inputs or amount mismatch!
-Expected:`
-        for (slug in expectedInputs) {
-          node.comment += ` ${expectedInputs[slug]} ${recipe.ingredients[slug].name}/min`
-        }
-        node.comment += "\nRecipe:"
-        for (slug in recipe.ingredients) {
-          node.comment += ` ${recipe.ingredients[slug].amount} ${recipe.ingredients[slug].name}/min`
-        }
-      }
-    } else {
+    try {
+      // use first input as a base
+      if (!(input1.value.slug && recipe.ingredients[input1.value.slug])) throw {error: "Missing or invalid first input!"}
+      const machines = satisfactory.computeMachines({
+          inputAmount: input1.value.amount,
+          recipeInputAmount: recipe.ingredients[input1.value.slug].amount,
+          recipeOutputAmount: recipe.product.amount,
+          perFloor: manufacturersPerFloor.value,
+          powerShards: powerShards.value
+      })
+      satisfactory.checkInputs([input1, input2, input3, input4], machines, recipe)
+      output.setValue({slug: recipe.product.slug, amount: machines.outputAmount})
+      node.comment = satisfactory.renderMachines(machines, {machinesName: 'manufacturers', productName: recipe.product.name})
+    } catch (error) {
       output.setValue({})
-      node.comment = "Invalid first input!"
+      node.comment = error.error
+      if (error.inputs) node.comment += "\nGetting: " + error.inputs
+      if (error.expectedInputs) node.comment += "\nExpected: " + error.expectedInputs
+      node.comment += "\n" + (error.recipe || satisfactory.renderRecipe(recipe))
     }
-  }
+ }
   update()
-  for (let inp of [input1, input2, input3, input4, recipeSelector]) {
+  for (let inp of [input1, input2, input3, input4, recipeSelector, manufacturersPerFloor, powerShards]) {
     inp.onChange = update
   }
 };

@@ -22,7 +22,7 @@ module.exports = (node, graph) => {
       node.comment = satisfactory.renderMachines(machines, {machinesName: 'constructors', productName: recipe.product.name})
     } else {
       output.setValue({})
-      node.comment = "Invalid input!"
+      node.comment = `Invalid input!\n${satisfactory.renderRecipe(recipe)}`
     }
   }
   update()
