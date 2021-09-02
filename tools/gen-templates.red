@@ -1,6 +1,6 @@
 Red []
 
-data: load %../assets/data.json
+data: load %data.json
 output: #()
 
 foreach [word name] [recipes "Recipes:" items "Items:" schematics "Schematics:" generators "Generators:" resources "Resources:" miners "Miners:" buildings "Buildings:"] [
@@ -121,21 +121,23 @@ foreach recipe values-of data/recipes [
 ]
 
 ; they made this way too complicated!
-output/generators: #()
-output/generators/coal: coalgen: #()
-coalgen/fuels: #()
-gendata: data/generators/Build_GeneratorCoal_C
-coalgen/name: data/buildings/Desc_GeneratorCoal_C/name
-coalgen/waterToPowerRatio: gendata/waterToPowerRatio
-coalgen/powerProduction: gendata/powerProduction
-coalgen/powerProductionExponent: gendata/powerProductionExponent
-foreach fuel gendata/fuel [
-    fuel: select data/items to word! fuel
-    put coalgen/fuels fuel/slug outfuel: copy #()
-    outfuel/name: fuel/name
-    ; return (((generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * Math.pow(overclock / 100, 1 / generator.powerProductionExponent);
-    factor: either fuel/liquid [60 / 1000] [60]
-    outfuel/amount: coalgen/powerProduction * factor / fuel/energyValue
+output/generators: #(coal: #() fuel: #())
+foreach [key building description] [coal Build_GeneratorCoal_C Desc_GeneratorCoal_C fuel Build_GeneratorFuel_C Desc_GeneratorFuel_C] [
+    coalgen: select output/generators key
+    coalgen/fuels: copy #()
+    gendata: select data/generators building
+    coalgen/name: select select data/buildings description 'name
+    coalgen/waterToPowerRatio: gendata/waterToPowerRatio
+    coalgen/powerProduction: gendata/powerProduction
+    coalgen/powerProductionExponent: gendata/powerProductionExponent
+    foreach fuel gendata/fuel [
+        fuel: select data/items to word! fuel
+        put coalgen/fuels fuel/slug outfuel: copy #()
+        outfuel/name: fuel/name
+        ; return (((generator.powerProduction / fuel.energyValue) * 60) / (fuel.liquid ? 1000 : 1)) * Math.pow(overclock / 100, 1 / generator.powerProductionExponent);
+        factor: either fuel/liquid [60 / 1000] [60]
+        outfuel/amount: coalgen/powerProduction * factor / fuel/energyValue
+    ]
 ]
 
 write %../node_modules/satisfactory/data.json to-json/pretty output "  "
