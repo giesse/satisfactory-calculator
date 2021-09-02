@@ -1,13 +1,13 @@
 {
-  "id": "f1c1f2c0-04c9-11ec-b6f7-dde978da9162",
+  "id": "6e060b10-0bc7-11ec-ad73-215b2462cc32",
   "version": "1.0.0-beta.2",
-  "name": "Computer factory",
+  "name": "Update 4",
   "nodes": [
     {
-      "id": "gdnYobXLT",
+      "id": "bNXhVFfoPo",
       "name": "Resource",
-      "x": 76,
-      "y": -492,
+      "x": 448,
+      "y": -669,
       "templateName": "Resource",
       "params": [
         {
@@ -21,10 +21,10 @@
       ]
     },
     {
-      "id": "M08f08o0o",
+      "id": "u5GB5qju_w",
       "name": "Refineries",
-      "x": 65,
-      "y": -452,
+      "x": 437,
+      "y": -629,
       "templateName": "Refineries",
       "params": [
         {
@@ -34,21 +34,25 @@
         {
           "name": "Input Fluid",
           "source": {
-            "id": "gdnYobXLT",
+            "id": "bNXhVFfoPo",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Plastic"
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "lxXEBugrV",
+      "id": "UN8NQ3wFr3",
       "name": "Refineries",
-      "x": 168,
-      "y": -367,
+      "x": 437,
+      "y": -567,
       "templateName": "Refineries",
       "params": [
         {
@@ -58,21 +62,25 @@
         {
           "name": "Input Fluid",
           "source": {
-            "id": "M08f08o0o",
+            "id": "u5GB5qju_w",
             "port": "Output Fluid"
           }
         },
         {
           "name": "Recipe",
-          "value": "Petroleum Coke"
+          "value": "Residual Fuel"
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "LbMUaXPxv",
+      "id": "mtG5OJDRfn",
       "name": "Resource",
       "x": -155,
-      "y": -628,
+      "y": -652,
       "templateName": "Resource",
       "params": [
         {
@@ -86,32 +94,16 @@
       ]
     },
     {
-      "id": "GnU3Nfp3O",
-      "name": "Coal Generators",
-      "x": 168,
-      "y": -319,
-      "templateName": "Coal Generators",
-      "params": [
-        {
-          "name": "Input Items",
-          "source": {
-            "id": "lxXEBugrV",
-            "port": "Output Items"
-          }
-        }
-      ]
-    },
-    {
-      "id": "_GGPrfqmg",
+      "id": "JzHbSyB_Vj",
       "name": "Storage",
       "x": -13,
-      "y": -396,
+      "y": -419,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "M08f08o0o",
+            "id": "u5GB5qju_w",
             "port": "Output Items"
           }
         },
@@ -126,52 +118,68 @@
       ]
     },
     {
-      "id": "fj39vptY7",
+      "id": "8ndzms-zoe",
       "name": "Smelters",
       "x": -155,
-      "y": -591,
+      "y": -615,
       "templateName": "Smelters",
       "params": [
         {
           "name": "Input Ore",
           "source": {
-            "id": "LbMUaXPxv",
+            "id": "mtG5OJDRfn",
             "port": "Output"
           }
+        },
+        {
+          "name": "Smelters per floor",
+          "value": 6
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "p-FsXSdJb",
+      "id": "xJVFcyh3GZ",
       "name": "Constructors",
       "x": -155,
-      "y": -548,
+      "y": -572,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "fj39vptY7",
+            "id": "8ndzms-zoe",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Copper Sheet"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "Ap1hjD296",
+      "id": "y9zLmWff1d",
       "name": "Storage",
       "x": -155,
-      "y": -503,
+      "y": -527,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "p-FsXSdJb",
+            "id": "xJVFcyh3GZ",
             "port": "Output"
           }
         },
@@ -186,37 +194,45 @@
       ]
     },
     {
-      "id": "6NaBTo_2C",
+      "id": "O1vh34zTQV",
       "name": "Assemblers",
       "x": -13,
-      "y": -276,
+      "y": -300,
       "templateName": "Assemblers",
       "params": [
         {
           "name": "Input 1",
           "source": {
-            "id": "Ap1hjD296",
+            "id": "y9zLmWff1d",
             "port": "Output"
           }
         },
         {
           "name": "Input 2",
           "source": {
-            "id": "0np7bxcKe",
+            "id": "4PY5-hvyFCt",
             "port": "Right"
           }
         },
         {
           "name": "Recipe",
           "value": "Circuit Board"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "asrjj3MJF",
+      "id": "fot-lbogYp",
       "name": "Resource",
       "x": -344,
-      "y": -465,
+      "y": -489,
       "templateName": "Resource",
       "params": [
         {
@@ -230,72 +246,96 @@
       ]
     },
     {
-      "id": "7HfzWgHKc",
+      "id": "CMzwVDgQCL",
       "name": "Smelters",
       "x": -344,
-      "y": -427,
+      "y": -451,
       "templateName": "Smelters",
       "params": [
         {
           "name": "Input Ore",
           "source": {
-            "id": "asrjj3MJF",
+            "id": "fot-lbogYp",
             "port": "Output"
           }
+        },
+        {
+          "name": "Smelters per floor",
+          "value": 6
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "xwEzEtnpz",
+      "id": "bFvjvwPoPF",
       "name": "Constructors",
       "x": -344,
-      "y": -380,
+      "y": -404,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "7HfzWgHKc",
+            "id": "CMzwVDgQCL",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Wire"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "x-R1kcimb",
+      "id": "Aptjywa3t7c",
       "name": "Constructors",
       "x": -344,
-      "y": -271,
+      "y": -295,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "FwPLAQYxc",
+            "id": "VY62Ij9iPeJ",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Cable"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "FwPLAQYxc",
+      "id": "VY62Ij9iPeJ",
       "name": "Storage",
       "x": -344,
-      "y": -332,
+      "y": -356,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "xwEzEtnpz",
+            "id": "bFvjvwPoPF",
             "port": "Output"
           }
         },
@@ -310,16 +350,16 @@
       ]
     },
     {
-      "id": "d-oNZSDbw",
+      "id": "ISBCUZiM-Ri",
       "name": "Storage",
       "x": -344,
-      "y": -224,
+      "y": -248,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "x-R1kcimb",
+            "id": "Aptjywa3t7c",
             "port": "Output"
           }
         },
@@ -334,10 +374,10 @@
       ]
     },
     {
-      "id": "QoPBW6Ix4",
+      "id": "6IMoxtUOnyt",
       "name": "Resource",
-      "x": -643,
-      "y": -681,
+      "x": -595,
+      "y": -648,
       "templateName": "Resource",
       "params": [
         {
@@ -351,72 +391,96 @@
       ]
     },
     {
-      "id": "wT_T_NQOB",
+      "id": "SgLcKb4ivl-",
       "name": "Smelters",
-      "x": -643,
-      "y": -644,
+      "x": -595,
+      "y": -611,
       "templateName": "Smelters",
       "params": [
         {
           "name": "Input Ore",
           "source": {
-            "id": "QoPBW6Ix4",
+            "id": "6IMoxtUOnyt",
             "port": "Output"
           }
+        },
+        {
+          "name": "Smelters per floor",
+          "value": 6
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "P6O4K3Nkc",
+      "id": "MCJS9nqst2s",
       "name": "Constructors",
-      "x": -643,
-      "y": -597,
+      "x": -595,
+      "y": -564,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "wT_T_NQOB",
+            "id": "SgLcKb4ivl-",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Iron Rod"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "LO3yFfdeI",
+      "id": "vdBh6b97sFf",
       "name": "Constructors",
-      "x": -647,
-      "y": -359,
+      "x": -599,
+      "y": -326,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "xpxtEJ-rT",
+            "id": "k9ZFy1HdmiK",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Screw"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "xpxtEJ-rT",
+      "id": "k9ZFy1HdmiK",
       "name": "Storage",
-      "x": -647,
-      "y": -418,
+      "x": -599,
+      "y": -385,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "cbVqy07bJ",
+            "id": "SJyrask2--I",
             "port": "Left"
           }
         },
@@ -431,16 +495,16 @@
       ]
     },
     {
-      "id": "3zj1NCaJb",
+      "id": "PYCLoF-qMsL",
       "name": "Splitter",
-      "x": -647,
-      "y": -311,
+      "x": -599,
+      "y": -278,
       "templateName": "Splitter",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "LO3yFfdeI",
+            "id": "vdBh6b97sFf",
             "port": "Output"
           }
         },
@@ -455,57 +519,65 @@
       ]
     },
     {
-      "id": "SKv9hna0P",
+      "id": "o5ZXEixDkPN",
       "name": "Manufacturers",
       "x": -270,
-      "y": -40,
+      "y": -64,
       "templateName": "Manufacturers",
       "params": [
         {
           "name": "Input 1",
           "source": {
-            "id": "3zj1NCaJb",
+            "id": "PYCLoF-qMsL",
             "port": "Right"
           }
         },
         {
           "name": "Input 2",
           "source": {
-            "id": "d-oNZSDbw",
+            "id": "ISBCUZiM-Ri",
             "port": "Output"
           }
         },
         {
           "name": "Input 3",
           "source": {
-            "id": "0np7bxcKe",
+            "id": "4PY5-hvyFCt",
             "port": "Left"
           }
         },
         {
           "name": "Input 4",
           "source": {
-            "id": "QVBybyMJs",
+            "id": "fCC0-6KWjex",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Computer"
+        },
+        {
+          "name": "Manufacturers per floor",
+          "value": 1
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "0np7bxcKe",
+      "id": "4PY5-hvyFCt",
       "name": "Splitter",
       "x": -13,
-      "y": -335,
+      "y": -359,
       "templateName": "Splitter",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "_GGPrfqmg",
+            "id": "JzHbSyB_Vj",
             "port": "Output"
           }
         },
@@ -520,16 +592,16 @@
       ]
     },
     {
-      "id": "QVBybyMJs",
+      "id": "fCC0-6KWjex",
       "name": "Storage",
       "x": -13,
-      "y": -226,
+      "y": -250,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "6NaBTo_2C",
+            "id": "O1vh34zTQV",
             "port": "Output"
           }
         },
@@ -544,10 +616,10 @@
       ]
     },
     {
-      "id": "98UuvXMG3",
+      "id": "8bZ3M1PoHX0",
       "name": "Resource",
-      "x": -921,
-      "y": -467,
+      "x": -873,
+      "y": -434,
       "templateName": "Resource",
       "params": [
         {
@@ -561,52 +633,68 @@
       ]
     },
     {
-      "id": "17p4aOnIW",
+      "id": "rK1Xef_TB3R",
       "name": "Smelters",
-      "x": -921,
-      "y": -425,
+      "x": -873,
+      "y": -392,
       "templateName": "Smelters",
       "params": [
         {
           "name": "Input Ore",
           "source": {
-            "id": "98UuvXMG3",
+            "id": "8bZ3M1PoHX0",
             "port": "Output"
           }
+        },
+        {
+          "name": "Smelters per floor",
+          "value": 6
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "d_GY6C4uo",
+      "id": "A7LODh9uADL",
       "name": "Constructors",
-      "x": -921,
-      "y": -380,
+      "x": -873,
+      "y": -347,
       "templateName": "Constructors",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "17p4aOnIW",
+            "id": "rK1Xef_TB3R",
             "port": "Output"
           }
         },
         {
           "name": "Recipe",
           "value": "Iron Plate"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "SnxYWPK6L",
+      "id": "eqmGocW5PVn",
       "name": "Storage",
-      "x": -921,
-      "y": -335,
+      "x": -873,
+      "y": -302,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "d_GY6C4uo",
+            "id": "A7LODh9uADL",
             "port": "Output"
           }
         },
@@ -621,43 +709,51 @@
       ]
     },
     {
-      "id": "ZUSFLr1K0",
+      "id": "Msu-84U1cWn",
       "name": "Assemblers",
-      "x": -921,
-      "y": -127,
+      "x": -873,
+      "y": -94,
       "templateName": "Assemblers",
       "params": [
         {
           "name": "Input 1",
           "source": {
-            "id": "SnxYWPK6L",
+            "id": "eqmGocW5PVn",
             "port": "Output"
           }
         },
         {
           "name": "Input 2",
           "source": {
-            "id": "diHAsdHcA",
+            "id": "TkG0f1tqBUV",
             "port": "Left"
           }
         },
         {
           "name": "Recipe",
           "value": "Reinforced Iron Plate"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "diHAsdHcA",
+      "id": "TkG0f1tqBUV",
       "name": "Splitter",
-      "x": -833,
-      "y": -228,
+      "x": -785,
+      "y": -195,
       "templateName": "Splitter",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "3zj1NCaJb",
+            "id": "PYCLoF-qMsL",
             "port": "Left"
           }
         },
@@ -672,16 +768,16 @@
       ]
     },
     {
-      "id": "EnhDQTQCz",
+      "id": "YsKQYql1b-y",
       "name": "Splitter",
-      "x": -643,
-      "y": -547,
+      "x": -595,
+      "y": -514,
       "templateName": "Splitter",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "P6O4K3Nkc",
+            "id": "MCJS9nqst2s",
             "port": "Output"
           }
         },
@@ -696,43 +792,51 @@
       ]
     },
     {
-      "id": "jBhcWpBD-",
+      "id": "bANu55Tzbxk",
       "name": "Assemblers",
-      "x": -720,
-      "y": -154,
+      "x": -672,
+      "y": -121,
       "templateName": "Assemblers",
       "params": [
         {
           "name": "Input 1",
           "source": {
-            "id": "diHAsdHcA",
+            "id": "TkG0f1tqBUV",
             "port": "Right"
           }
         },
         {
           "name": "Input 2",
           "source": {
-            "id": "EnhDQTQCz",
+            "id": "YsKQYql1b-y",
             "port": "Left"
           }
         },
         {
           "name": "Recipe",
           "value": "Rotor"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "cbVqy07bJ",
+      "id": "SJyrask2--I",
       "name": "Splitter",
-      "x": -631,
-      "y": -497,
+      "x": -583,
+      "y": -464,
       "templateName": "Splitter",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "EnhDQTQCz",
+            "id": "YsKQYql1b-y",
             "port": "Right"
           }
         },
@@ -747,43 +851,51 @@
       ]
     },
     {
-      "id": "fD-BBWO-p",
+      "id": "fjMWg7zkAi5",
       "name": "Assemblers",
       "x": -385,
-      "y": 189,
+      "y": 165,
       "templateName": "Assemblers",
       "params": [
         {
           "name": "Input 1",
           "source": {
-            "id": "zEC9SoA4S",
+            "id": "snZY-2uuiqG",
             "port": "Output"
           }
         },
         {
           "name": "Input 2",
           "source": {
-            "id": "cbVqy07bJ",
+            "id": "SJyrask2--I",
             "port": "Right"
           }
         },
         {
           "name": "Recipe",
           "value": "Modular Frame"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
         }
       ]
     },
     {
-      "id": "zEC9SoA4S",
+      "id": "snZY-2uuiqG",
       "name": "Storage",
-      "x": -919,
-      "y": -82,
+      "x": -871,
+      "y": -49,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "ZUSFLr1K0",
+            "id": "Msu-84U1cWn",
             "port": "Output"
           }
         },
@@ -796,7 +908,214 @@
           "value": 9
         }
       ]
+    },
+    {
+      "id": "rSFvS7HMmEP",
+      "name": "Fuel Generators",
+      "x": 448,
+      "y": -521,
+      "templateName": "Fuel Generators",
+      "params": [
+        {
+          "name": "Input Fluid",
+          "source": {
+            "id": "UN8NQ3wFr3",
+            "port": "Output Fluid"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AqEXFG_a5Vm",
+      "name": "Resource",
+      "x": 447,
+      "y": -359,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Caterium Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 270
+        }
+      ]
+    },
+    {
+      "id": "3Z7kNS_t1Sc",
+      "name": "Constructors",
+      "x": 447,
+      "y": -267,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "KU8hABMQKnV",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Quickwire"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "KU8hABMQKnV",
+      "name": "Smelters",
+      "x": 447,
+      "y": -318,
+      "templateName": "Smelters",
+      "params": [
+        {
+          "name": "Input Ore",
+          "source": {
+            "id": "AqEXFG_a5Vm",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Smelters per floor",
+          "value": 6
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "i_ehyNv3Gmg",
+      "name": "Resource",
+      "x": 404,
+      "y": -110,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Coal"
+        },
+        {
+          "name": "Amount",
+          "value": 120
+        }
+      ]
+    },
+    {
+      "id": "MVuQsQcYXBL",
+      "name": "Coal Generators",
+      "x": 404,
+      "y": -69,
+      "templateName": "Coal Generators",
+      "params": [
+        {
+          "name": "Input Items",
+          "source": {
+            "id": "i_ehyNv3Gmg",
+            "port": "Output"
+          }
+        }
+      ]
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "-dfma9pEQVY",
+      "x": -947,
+      "y": -684,
+      "width": 1200,
+      "height": 900,
+      "fontSize": 18,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Rocky Desert City",
+      "collapseFlags": {}
+    },
+    {
+      "id": "nEUr7VFLSJJ",
+      "x": 300,
+      "y": -700,
+      "width": 500,
+      "height": 240,
+      "fontSize": 18,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Oil Islands",
+      "collapseFlags": {}
+    },
+    {
+      "id": "rHEqQvgFSWQ",
+      "x": 301,
+      "y": -399,
+      "width": 500,
+      "height": 180,
+      "fontSize": 18,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Rocky Desert Caterium Node",
+      "collapseFlags": {}
+    },
+    {
+      "id": "-ctRZncDUSc",
+      "x": 305,
+      "y": -165,
+      "width": 500,
+      "height": 180,
+      "fontSize": 18,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Coal Generators (4x)",
+      "collapseFlags": {}
+    }
+  ]
 }
