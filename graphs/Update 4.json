@@ -300,8 +300,8 @@
     {
       "id": "Aptjywa3t7c",
       "name": "Constructors",
-      "x": -344,
-      "y": -295,
+      "x": -333,
+      "y": -252,
       "templateName": "Constructors",
       "params": [
         {
@@ -328,15 +328,15 @@
     {
       "id": "VY62Ij9iPeJ",
       "name": "Storage",
-      "x": -344,
-      "y": -356,
+      "x": -333,
+      "y": -313,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "bFvjvwPoPF",
-            "port": "Output"
+            "id": "tKzZ1MpxB",
+            "port": "Right"
           }
         },
         {
@@ -352,8 +352,8 @@
     {
       "id": "ISBCUZiM-Ri",
       "name": "Storage",
-      "x": -344,
-      "y": -248,
+      "x": -333,
+      "y": -205,
       "templateName": "Storage",
       "params": [
         {
@@ -1030,8 +1030,8 @@
     {
       "id": "qo4hSzUO5",
       "name": "Resource",
-      "x": -11,
-      "y": -157,
+      "x": -1720,
+      "y": -455,
       "templateName": "Resource",
       "params": [
         {
@@ -1047,8 +1047,8 @@
     {
       "id": "pjtqFpock",
       "name": "Constructors",
-      "x": -11,
-      "y": -121,
+      "x": -1720,
+      "y": -419,
       "templateName": "Constructors",
       "params": [
         {
@@ -1218,6 +1218,231 @@
         {
           "name": "Power shards",
           "value": 0
+        }
+      ]
+    },
+    {
+      "id": "-tGHkr3vN",
+      "name": "Assemblers",
+      "x": -1520,
+      "y": -215,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "m6ksNcnfs",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "5XFClyAxb",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Encased Industrial Beam"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "m6ksNcnfs",
+      "name": "Storage",
+      "x": -1720,
+      "y": -373,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "pjtqFpock",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "5XFClyAxb",
+      "name": "Storage",
+      "x": -1510,
+      "y": -285,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "UKMWxQvpR",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 24
+        }
+      ]
+    },
+    {
+      "id": "oBXK2RmYq",
+      "name": "Assemblers",
+      "x": -1201,
+      "y": -155,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "wcRxrrEEw",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "tKzZ1MpxB",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Stator"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "tKzZ1MpxB",
+      "name": "Splitter",
+      "x": -344,
+      "y": -357,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "bFvjvwPoPF",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set left"
+        },
+        {
+          "name": "Split",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "id": "wcRxrrEEw",
+      "name": "Storage",
+      "x": -1280,
+      "y": -286,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "JkBfxO-u9",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "id": "maI1p8M_p",
+      "name": "Assemblers",
+      "x": -1199,
+      "y": 103,
+      "templateName": "Assemblers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "oBXK2RmYq",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "gRVbXGs__",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Motor"
+        },
+        {
+          "name": "Assemblers per floor",
+          "value": 3
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "gRVbXGs__",
+      "name": "Storage",
+      "x": -598,
+      "y": -53,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "bANu55Tzbxk",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 5
         }
       ]
     }
