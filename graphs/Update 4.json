@@ -1026,6 +1026,200 @@
           }
         }
       ]
+    },
+    {
+      "id": "qo4hSzUO5",
+      "name": "Resource",
+      "x": -11,
+      "y": -157,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Limestone"
+        },
+        {
+          "name": "Amount",
+          "value": 180
+        }
+      ]
+    },
+    {
+      "id": "pjtqFpock",
+      "name": "Constructors",
+      "x": -11,
+      "y": -121,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "qo4hSzUO5",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Concrete"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "xMgILe2r5",
+      "name": "Foundries",
+      "x": -1381,
+      "y": -451,
+      "templateName": "Foundries",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "IxBZgWK5N",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "HQv9VlgD_",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Steel Ingot"
+        },
+        {
+          "name": "Foundries per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "IxBZgWK5N",
+      "name": "Resource",
+      "x": -1443,
+      "y": -501,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Coal"
+        },
+        {
+          "name": "Amount",
+          "value": 240
+        }
+      ]
+    },
+    {
+      "id": "HQv9VlgD_",
+      "name": "Resource",
+      "x": -1299,
+      "y": -499,
+      "templateName": "Resource",
+      "params": [
+        {
+          "name": "Resource",
+          "value": "Iron Ore"
+        },
+        {
+          "name": "Amount",
+          "value": 240
+        }
+      ]
+    },
+    {
+      "id": "JDMufMMtJ",
+      "name": "Splitter",
+      "x": -1381,
+      "y": -405,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "xMgILe2r5",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set right"
+        },
+        {
+          "name": "Split",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "id": "UKMWxQvpR",
+      "name": "Constructors",
+      "x": -1510,
+      "y": -336,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "JDMufMMtJ",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Steel Beam"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "JkBfxO-u9",
+      "name": "Constructors",
+      "x": -1280,
+      "y": -333,
+      "templateName": "Constructors",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "JDMufMMtJ",
+            "port": "Right"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Steel Pipe"
+        },
+        {
+          "name": "Constructors per floor",
+          "value": 4
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
     }
   ],
   "comments": [
