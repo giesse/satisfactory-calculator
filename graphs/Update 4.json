@@ -386,7 +386,7 @@
         },
         {
           "name": "Amount",
-          "value": 240
+          "value": 360
         }
       ]
     },
@@ -490,15 +490,15 @@
         },
         {
           "name": "Value",
-          "value": 130
+          "value": 180
         }
       ]
     },
     {
       "id": "PYCLoF-qMsL",
       "name": "Splitter",
-      "x": -599,
-      "y": -278,
+      "x": -608,
+      "y": -281,
       "templateName": "Splitter",
       "params": [
         {
@@ -725,8 +725,8 @@
         {
           "name": "Input 2",
           "source": {
-            "id": "TkG0f1tqBUV",
-            "port": "Left"
+            "id": "hYw8ll_Dv",
+            "port": "Right"
           }
         },
         {
@@ -746,8 +746,8 @@
     {
       "id": "TkG0f1tqBUV",
       "name": "Splitter",
-      "x": -785,
-      "y": -195,
+      "x": -749,
+      "y": -202,
       "templateName": "Splitter",
       "params": [
         {
@@ -759,11 +759,11 @@
         },
         {
           "name": "Mode",
-          "value": "Set left"
+          "value": "Set right"
         },
         {
           "name": "Split",
-          "value": 240
+          "value": 150
         }
       ]
     },
@@ -846,15 +846,15 @@
         },
         {
           "name": "Split",
-          "value": 36
+          "value": 72
         }
       ]
     },
     {
       "id": "fjMWg7zkAi5",
       "name": "Assemblers",
-      "x": -385,
-      "y": 165,
+      "x": -433,
+      "y": 103,
       "templateName": "Assemblers",
       "params": [
         {
@@ -905,7 +905,7 @@
         },
         {
           "name": "Value",
-          "value": 9
+          "value": 18
         }
       ]
     },
@@ -1040,7 +1040,7 @@
         },
         {
           "name": "Amount",
-          "value": 180
+          "value": 240
         }
       ]
     },
@@ -1120,7 +1120,7 @@
         },
         {
           "name": "Amount",
-          "value": 240
+          "value": 360
         }
       ]
     },
@@ -1137,7 +1137,7 @@
         },
         {
           "name": "Amount",
-          "value": 240
+          "value": 360
         }
       ]
     },
@@ -1161,7 +1161,7 @@
         },
         {
           "name": "Split",
-          "value": 60
+          "value": 84
         }
       ]
     },
@@ -1276,7 +1276,7 @@
         },
         {
           "name": "Value",
-          "value": 30
+          "value": 60
         }
       ]
     },
@@ -1300,15 +1300,15 @@
         },
         {
           "name": "Value",
-          "value": 24
+          "value": 48
         }
       ]
     },
     {
       "id": "oBXK2RmYq",
       "name": "Assemblers",
-      "x": -1201,
-      "y": -155,
+      "x": -1198,
+      "y": -78,
       "templateName": "Assemblers",
       "params": [
         {
@@ -1366,15 +1366,15 @@
     {
       "id": "wcRxrrEEw",
       "name": "Storage",
-      "x": -1280,
-      "y": -286,
+      "x": -1199,
+      "y": -214,
       "templateName": "Storage",
       "params": [
         {
           "name": "Input",
           "source": {
-            "id": "JkBfxO-u9",
-            "port": "Output"
+            "id": "va05sPX_3",
+            "port": "Right"
           }
         },
         {
@@ -1443,6 +1443,151 @@
         {
           "name": "Value",
           "value": 5
+        }
+      ]
+    },
+    {
+      "id": "1yKg_VKzD",
+      "name": "Manufacturers",
+      "x": -1228,
+      "y": 298,
+      "templateName": "Manufacturers",
+      "params": [
+        {
+          "name": "Input 1",
+          "source": {
+            "id": "fkO7l9aWu",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Input 2",
+          "source": {
+            "id": "va05sPX_3",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Input 3",
+          "source": {
+            "id": "hYw8ll_Dv",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Input 4",
+          "source": {
+            "id": "tJ75LMyVk",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Recipe",
+          "value": "Heavy Modular Frame"
+        },
+        {
+          "name": "Manufacturers per floor",
+          "value": 1
+        },
+        {
+          "name": "Power shards",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "tJ75LMyVk",
+      "name": "Storage",
+      "x": -433,
+      "y": 141,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "fjMWg7zkAi5",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "va05sPX_3",
+      "name": "Splitter",
+      "x": -1280,
+      "y": -281,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "JkBfxO-u9",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set left"
+        },
+        {
+          "name": "Split",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "id": "fkO7l9aWu",
+      "name": "Storage",
+      "x": -1520,
+      "y": -165,
+      "templateName": "Storage",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "-tGHkr3vN",
+            "port": "Output"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set Output"
+        },
+        {
+          "name": "Value",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "hYw8ll_Dv",
+      "name": "Splitter",
+      "x": -864,
+      "y": -168,
+      "templateName": "Splitter",
+      "params": [
+        {
+          "name": "Input",
+          "source": {
+            "id": "TkG0f1tqBUV",
+            "port": "Left"
+          }
+        },
+        {
+          "name": "Mode",
+          "value": "Set right"
+        },
+        {
+          "name": "Split",
+          "value": 240
         }
       ]
     }
